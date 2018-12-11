@@ -1,0 +1,170 @@
+﻿@model KinderGals.Models.TSignUp
+
+@{
+    ViewBag.Title = "Sign Up";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login V9</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="~/images/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/css/SLbootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/css/1font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/css/material-design-iconic-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/css/1animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/css/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/css/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/css/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/css/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/css/1util.css">
+    <link rel="stylesheet" type="text/css" href="~/css/1main.css">
+    <!--===============================================================================================-->
+</head>
+<body>
+
+    @using (Html.BeginForm())
+    {
+    @Html.AntiForgeryToken()
+    <div class="container-login100" style="background-image: url('~/images/kids.jpg');">
+        <div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
+
+
+
+            <span class="login100-form-title p-b-37">
+                Sign Up
+            </span>
+
+
+
+            <div class="form-horizontal">
+
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.UserID, htmlAttributes: new { @class = "control-label col-md-2" })
+
+                    @Html.EditorFor(model => model.UserID, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.UserID, "", new { @class = "text-danger" })
+                    <span class="focus-input100"></span>
+
+                </div>
+            </div>
+
+            <div class="form-group">
+
+                @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                <span class="focus-input100"></span>
+
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+
+                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                <span class="focus-input100"></span>
+
+
+            </div>
+
+            <div class="form-group">
+
+                @Html.LabelFor(model => model.ConfirmPassword, htmlAttributes: new { @class = "control-label col-md-2" })
+
+                @Html.EditorFor(model => model.ConfirmPassword, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
+                <span class="focus-input100"></span>
+
+
+            </div>
+
+            <div class="form-group">
+               
+                    @Html.LabelFor(model => model.SectionA, htmlAttributes: new { @class = "control-label col-md-2" })
+
+                    <div class="checkbox">
+                        @Html.EditorFor(model => model.SectionA)
+                        @Html.ValidationMessageFor(model => model.SectionA, "", new { @class = "text-danger" })
+                    </div>
+               
+            </div>
+
+            <div class="form-group">
+                
+                    @Html.LabelFor(model => model.SectionB, htmlAttributes: new { @class = "control-label col-md-2" })
+
+                    <div class="checkbox">
+                        @Html.EditorFor(model => model.SectionB)
+                        @Html.ValidationMessageFor(model => model.SectionB, "", new { @class = "text-danger" })
+                    </div>
+                
+            </div>
+
+            <div class="form-group">
+                    @Html.LabelFor(model => model.SectionC, htmlAttributes: new { @class = "control-label col-md-2" })
+
+                    <div class="checkbox">
+                        @Html.EditorFor(model => model.SectionC)
+                        @Html.ValidationMessageFor(model => model.SectionC, "", new { @class = "text-danger" })
+                    </div>
+               
+            </div>
+
+            <div class="flex-c p-b-112">
+                <div class="container-login100-form-btn">
+                    <button class="login100-form-btn" href="@Url.Action("TeacherDashBoard","TSignUps")">
+                        Sign Up
+                    </button>
+
+                </div>
+            </div>
+            </div>
+        </div>
+
+}
+
+
+<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+<script src="~/js/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+<script src="~/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+<script src="~/js/1popper.js"></script>
+<script src="~/js/1bootstrap.min.js"></script>
+<!--===============================================================================================-->
+<script src="~/js/select2.min.js"></script>
+<!--===============================================================================================-->
+<script src="~/js/moment.min.js"></script>
+<script src="~/js/daterangepicker.js"></script>
+<!--===============================================================================================-->
+<script src="~/js/countdowntime.js"></script>
+<!--===============================================================================================-->
+<script src="~/js/1main.js"></script>
+
+</body>
+</html>
+
+
